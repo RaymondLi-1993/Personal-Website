@@ -16,12 +16,6 @@ module.exports = {
         Nunito: [`Nunito`],
         openSans: [`Open+Sans`],
       },
-      height: {
-        l: `22rem`,
-        xl: `28rem`,
-        xxl: `43rem`,
-        xxxl: `50rem`,
-      },
       zIndex: {
         negative: -1,
       },

@@ -1,35 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import DownArrow from "./iconComponents/arrow";
 
 const Hero = () => {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+  }, []);
+
   const handleClick = () => {
     document.getElementById(`projects`).scrollIntoView({ behavior: `smooth` });
   };
 
   return (
-    <div className="w-screen h-screen bg-white">
-      <div className="w-screen h-xxl flex items-center">
-        <div className="container flex flex-col m-auto">
-          <div className="sm:text-5xl md:text-5xl md:h-20 md:px-6 lg:text-left lg:w-6/12 xl:h-20 h-16 text-center font-openSans font-bold text-4xl p-2 text-black container w-9/12 m-auto my-6 ">
+    <div className="w-screen h-screen flex flex-col items-center bg-white">
+      <div className="container w-full m-auto p-6 lg:text-left text-center leading-relaxed">
+        <h1
+          className={`text-gray-800 w-full font-mono text-5xl p-2 font-semibold transform ${
+            loading
+              ? "lg:opacity-100 lg:translate-x-8 lg:duration-1000"
+              : "lg:opacity-0"
+          }`}
+        >
+          Hello there, I am{" "}
+          <span className="sm:leading-loose lg:leading-none font-extrabold font-Nunito text-6xl bg-gradient-to-r from-blue-600 to-gray-700 bg-clip-text text-transparent">
             Raymond Li
-          </div>
-          <p className="sm:text-xl md:w-6/12 md:my-0 lg:text-2xl lg:w-6/12 lg:leading-loose xl:text-2xl text-black text-lg leading-loose container m-auto my-6 w-9/12">
-            Hello, I am a Software Developer based in San Francisco. I have
-            experience with React, Redux, Redux-Thunk, TailwindCSS, Node.js,
-            Express.js, HTML5, CSS3, Git, and MongoDB.
-          </p>
-          <div className="md:w-5/12 md:mt-8 container m-auto text-right w-9/12 p-4">
-            <a
-              href="#"
-              className="h-full border-red-700 border-4 text-base md:text-lg p-2 rounded-lg font-bold text-black transition ease-in hover:border-red-400 hover:text-gray-600"
-            >
-              Resume
-            </a>
-          </div>
-        </div>
+          </span>
+        </h1>
+        <h1
+          className={`text-gray-800 font-normal font-mono text-4xl p-2 transform ${
+            loading
+              ? "lg:duration-1000 lg:opacity-100 lg:translate-x-8"
+              : "lg:opacity-0"
+          }`}
+        >
+          I'm a fullstack web developer.
+        </h1>
       </div>
-      <div className="container m-auto w-16 outline-none duration-1000 animate-bounce">
+      <div className="container w-24 my-24 duration-1000 animate-bounce">
         <button
           onClick={() => handleClick()}
           className="w-full h-full"
@@ -41,4 +50,5 @@ const Hero = () => {
     </div>
   );
 };
+
 export default Hero;
