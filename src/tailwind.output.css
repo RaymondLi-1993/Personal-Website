@@ -32108,6 +32108,26 @@ video {
   }
 }
 
+@-webkit-keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
 .animate-none{
   -webkit-animation: none;
           animation: none;
@@ -32131,6 +32151,16 @@ video {
 .animate-bounce{
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
+}
+
+.animate-fadeIn{
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+}
+
+.animate-fadeInSlow{
+  -webkit-animation: fadeIn 3s;
+          animation: fadeIn 3s;
 }
 
 @media (min-width: 640px){
@@ -63633,6 +63663,16 @@ video {
   .sm\:animate-bounce{
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .sm\:animate-fadeIn{
+    -webkit-animation: fadeIn 2s;
+            animation: fadeIn 2s;
+  }
+
+  .sm\:animate-fadeInSlow{
+    -webkit-animation: fadeIn 3s;
+            animation: fadeIn 3s;
   }
 }
 
@@ -95137,6 +95177,16 @@ video {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
+
+  .md\:animate-fadeIn{
+    -webkit-animation: fadeIn 2s;
+            animation: fadeIn 2s;
+  }
+
+  .md\:animate-fadeInSlow{
+    -webkit-animation: fadeIn 3s;
+            animation: fadeIn 3s;
+  }
 }
 
 @media (min-width: 1024px){
@@ -126639,6 +126689,16 @@ video {
   .lg\:animate-bounce{
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .lg\:animate-fadeIn{
+    -webkit-animation: fadeIn 2s;
+            animation: fadeIn 2s;
+  }
+
+  .lg\:animate-fadeInSlow{
+    -webkit-animation: fadeIn 3s;
+            animation: fadeIn 3s;
   }
 }
 
@@ -158143,6 +158203,16 @@ video {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
+
+  .xl\:animate-fadeIn{
+    -webkit-animation: fadeIn 2s;
+            animation: fadeIn 2s;
+  }
+
+  .xl\:animate-fadeInSlow{
+    -webkit-animation: fadeIn 3s;
+            animation: fadeIn 3s;
+  }
 }
 
 @media (min-width: 1536px){
@@ -189645,5 +189715,15 @@ video {
   .\32xl\:animate-bounce{
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .\32xl\:animate-fadeIn{
+    -webkit-animation: fadeIn 2s;
+            animation: fadeIn 2s;
+  }
+
+  .\32xl\:animate-fadeInSlow{
+    -webkit-animation: fadeIn 3s;
+            animation: fadeIn 3s;
   }
 }

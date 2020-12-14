@@ -3,7 +3,7 @@ import React from "react";
 import Header from "./header";
 import Hero from "./hero";
 import Project from "./projects";
-// import Skills from "./skills";
+import Skills from "./skills";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Hero />
       <Project />
-      {/* <Skills /> */}
+      <Skills />
     </div>
   );
 }

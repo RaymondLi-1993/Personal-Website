@@ -12,6 +12,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        fadeIn: `fadeIn 2s`,
+        fadeInSlow: `fadeIn 3s`,
+      },
+      keyframes: {
+        fadeIn: {
+          from: {
+            opacity: 0,
+          },
+          to: {
+            opacity: 1,
+          },
+        },
+      },
       fontFamily: {
         Nunito: [`Nunito`],
         openSans: [`Open+Sans`],
