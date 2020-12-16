@@ -31,7 +31,8 @@ module.exports = {
         openSans: [`Open+Sans`],
       },
       zIndex: {
-        negative: -1,
+        positive: 9999,
+        negative: -9999,
       },
       inset: {
         "1/2": "50%",

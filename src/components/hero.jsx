@@ -14,22 +14,22 @@ const Hero = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col items-center bg-white">
+    <div className="w-screen h-screen flex flex-col items-center">
       <div className="container w-full m-auto p-6 lg:text-left text-center leading-relaxed">
         <h1
-          className={`text-gray-800 w-full font-mono text-5xl p-2 font-semibold transform ${
+          className={`text-gray-800 w-full font-mono text-5xl p-2 font-light transform ${
             loading
               ? "lg:opacity-100 lg:translate-x-8 lg:duration-1000"
               : "lg:opacity-0"
           }`}
         >
           Hello there, I am{" "}
-          <span className="sm:leading-loose lg:leading-none font-extrabold font-Nunito text-6xl bg-gradient-to-r from-blue-600 to-gray-700 bg-clip-text text-transparent">
+          <span className="sm:leading-loose lg:leading-none font-extrabold font-Nunito text-6xl text-blue-900">
             Raymond Li
           </span>
         </h1>
         <h1
-          className={`text-gray-800 font-normal font-mono text-4xl p-2 transform ${
+          className={`text-gray-800 font-light font-mono text-4xl p-2 transform ${
             loading
               ? "lg:duration-1000 lg:opacity-100 lg:translate-x-8"
               : "lg:opacity-0"

@@ -4,6 +4,9 @@ import Header from "./header";
 import Hero from "./hero";
 import Project from "./projects";
 import Skills from "./skills";
+import AboutMe from "./aboutMe";
+import ContactMe from "./contactMe";
+import Footer from "./footer";
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
       <Hero />
       <Project />
       <Skills />
+      <AboutMe />
+      <ContactMe />
+      <Footer />
     </div>
   );
 }
