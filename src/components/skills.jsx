@@ -23,7 +23,10 @@ const skills = () => {
   ];
 
   return (
-    <div className="w-full h-1/3 bg-gray-800 transform -skew-y-2 mt-4">
+    <div
+      id="Skills"
+      className="w-full h-1/3 bg-gray-800 transform -skew-y-2 mt-4"
+    >
       <div className="container items-center m-auto w-full h-full transform skew-y-2 p-4">
         <div className="text-center font-mono p-4 text-5xl text-white">
           Skills

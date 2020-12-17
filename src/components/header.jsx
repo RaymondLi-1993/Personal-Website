@@ -1,35 +1,41 @@
 import React from "react";
 
-import LinkedIn from "./iconComponents/linkedIn";
-import GitHub from "./iconComponents/github";
-import AngelList from "./iconComponents/angelList";
 import Email from "./iconComponents/email";
+import { Projects, AboutMe, Skills } from "./iconComponents/technologies";
 
 const Header = () => {
+  const handleClick = data => {
+    document.getElementById(`${data}`).scrollIntoView({ behavior: `smooth` });
+  };
+
   return (
     <>
       <nav className="bg-gray-800 w-screen h-16">
         <div className="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center">
           <div className="flex w-full justify-evenly items-center">
-            <div className="bg-white rounded-full h-10 w-10 cursor-pointer transform transition ease-in hover:scale-125">
-              <a href="https://www.linkedin.com/in/raymond-li-460073193">
-                <LinkedIn />
-              </a>
+            <div
+              onClick={() => handleClick(`projects`)}
+              className="bg-white rounded-full h-10 w-10 cursor-pointer transform transition ease-in hover:scale-125"
+            >
+              <Projects />
             </div>
-            <div className="bg-white rounded-full h-10 w-10 cursor-pointer transform transition ease-in hover:scale-125">
-              <a href="https://github.com/RaymondLi-1993">
-                <GitHub />
-              </a>
+            <div
+              onClick={() => handleClick(`AboutMe`)}
+              className="bg-white rounded-full h-10 w-10 cursor-pointer transform transition ease-in hover:scale-125"
+            >
+              <AboutMe />
             </div>
-            <div className="bg-white rounded-full h-10 w-10 cursor-pointer transform transition ease-in hover:scale-125">
-              <a href="#">
-                <AngelList />
-              </a>
+            <div
+              onClick={() => handleClick(`Skills`)}
+              className="bg-white rounded-full h-10 w-10 cursor-pointer transform transition ease-in hover:scale-125"
+            >
+              <Skills />
             </div>
-            <div className="bg-white rounded-full h-10 w-10 cursor-pointer transform transition ease-in hover:scale-125">
-              <a href="email">
-                <Email />
-              </a>
+            <div
+              onClick={() => handleClick(`contactMe`)}
+              className="bg-white rounded-full h-10 w-10 cursor-pointer transform transition ease-in hover:scale-125"
+            >
+              <Email />
             </div>
           </div>
         </div>

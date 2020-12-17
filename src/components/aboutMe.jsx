@@ -7,6 +7,7 @@ const AboutMe = () => {
   return (
     <div
       ref={ref}
+      id="AboutMe"
       className="m-auto w-full h-full container flex lg:flex-row lg:h-2/3  flex-col p-4 bg-white"
     >
       <div
