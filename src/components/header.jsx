@@ -9,7 +9,7 @@ const Header = () => {
   };
 
   return (
-    <>
+    <div>
       <nav className="bg-gray-800 w-screen h-16">
         <div className="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center">
           <div className="flex w-full justify-evenly items-center">
@@ -40,7 +40,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 export default Header;
