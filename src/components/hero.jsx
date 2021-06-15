@@ -1,42 +1,46 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import TypeWriter from "typewriter-effect";
 
 import DownArrow from "./iconComponents/arrow";
 
 const Hero = () => {
-  const [loading, setLoading] = useState(false);
+  
 
-  useEffect(() => {
-    setLoading(true);
-  }, []);
+
 
   const handleClick = () => {
     document.getElementById(`projects`).scrollIntoView({ behavior: `smooth` });
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col items-center">
+    <div className="w-screen h-screen flex flex-col items-center bg-dracula-currentLine">
       <div className="container w-full m-auto p-6 lg:text-left text-center leading-relaxed">
         <h1
-          className={`text-gray-800 w-full font-mono text-5xl p-2 font-light transform ${
-            loading
-              ? "lg:opacity-100 lg:translate-x-8 lg:duration-1000"
-              : "lg:opacity-0"
-          }`}
+          className={` text-dracula-draculaCyan w-full font-Lato text-6xl font-semibold p-2 lg:mx-8`}
         >
           Hello there, I am{" "}
-          <span className="sm:leading-loose lg:leading-none font-extrabold font-Nunito text-6xl text-blue-900">
-            Raymond Li
+          <span className="sm:leading-loose lg:leading-none font-NunitoSans font-extrabold text-dracula-currentLine text-6xl" style={{WebkitTextStroke:"2px silver"}}>
+            RAYMOND LI
           </span>
         </h1>
+        
         <h1
-          className={`text-gray-800 font-light font-mono text-4xl p-2 transform ${
-            loading
-              ? "lg:duration-1000 lg:opacity-100 lg:translate-x-8"
-              : "lg:opacity-0"
-          }`}
+          className={` text-dracula-draculaCyan font-thin font-RobotoMono text-5xl p-2 lg:mx-8`}
         >
-          I'm a fullstack web developer.
+          <TypeWriter
+          onInit={((typewriter) =>{
+            typewriter
+            .typeString("I am a Fullstack Engineer.")
+            .start();
+          })}
+          />
         </h1>
+        <div className="container h-16 flex items-end justify-center lg:justify-start lg:mx-11">
+          <button className="linkButton w-24 h-8 text-white" style={{ outline: `none` }} onClick={() => {
+            window.open("https://drive.google.com/file/d/1ypuO2dOjNrAKni4PUR6vXu58l7oUN86e/view", "_blank")
+            
+          }} >Resume</button>
+        </div>
       </div>
       <div className="container w-24 my-24 duration-1000 animate-bounce">
         <button

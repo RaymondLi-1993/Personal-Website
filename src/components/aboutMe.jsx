@@ -2,13 +2,13 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 
 const AboutMe = () => {
-  const { ref, inView, entry } = useInView({});
+  const { ref, inView } = useInView();
 
   return (
     <div
       ref={ref}
       id="AboutMe"
-      className="m-auto w-full h-full container flex lg:flex-row lg:h-2/3  flex-col p-4 bg-white"
+      className="m-auto w-full h-full container flex lg:flex-row lg:h-2/3 flex-col p-4"
     >
       <div
         className={`lg:w-1/2 lg:h-full lg:items-center lg:justify-center w-full h-1/3 transform flex justify-center ${

@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <div>
-      <nav className="bg-gray-800 w-screen h-16">
+      <nav className="bg-dracula-backGround w-screen h-16">
         <div className="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center">
           <div className="flex w-full justify-evenly items-center">
             <div
@@ -18,12 +18,6 @@ const Header = () => {
               className="bg-white rounded-full h-10 w-10 cursor-pointer transform transition ease-in hover:scale-125"
             >
               <Projects />
-            </div>
-            <div
-              onClick={() => handleClick(`AboutMe`)}
-              className="bg-white rounded-full h-10 w-10 cursor-pointer transform transition ease-in hover:scale-125"
-            >
-              <AboutMe />
             </div>
             <div
               onClick={() => handleClick(`Skills`)}
