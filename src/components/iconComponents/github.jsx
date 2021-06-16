@@ -2,8 +2,9 @@ import React from "react";
 
 const GitHub = () => {
   return (
+    <div className="bg-white w-16 h-16 rounded-full">
     <svg
-      className="w-full h-full"
+      className="w-16 h-16"
       viewBox="0 0 512 512"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -20,6 +21,7 @@ const GitHub = () => {
         fill="#989393"
       />
     </svg>
+    </div>
   );
 };
 

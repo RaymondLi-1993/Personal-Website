@@ -19,12 +19,13 @@ const AboutMe = () => {
       >
         <img
           src={`Images/aboutMe.jpg`}
+          alt="profile"
           className="lg:w-96 lg:h-96 w-72 h-72 rounded-full object-cover"
         ></img>
       </div>
       <div className="lg:w-1/2 lg:h-full w-full h-1/2 container m-auto">
         <h1
-          className={`w-9/12 h-16 m-auto my-6 text-center font-mono font-semibold text-5xl transform text-blue-900 ${
+          className={`w-9/12 h-16 m-auto my-6 text-center font-openSans font-semibold text-5xl transform text-dracula-currentLine ${
             inView
               ? "lg:opacity-100 lg:-translate-x-8 lg:duration-1000"
               : "lg:opacity-0 translate-x-16"
@@ -33,7 +34,7 @@ const AboutMe = () => {
           About Me
         </h1>
         <p
-          className={`my-4 w-9/12 m-auto container font-Nunito leading-relaxed transform ${
+          className={`my-4 w-9/12 m-auto container font-openSans transform ${
             inView
               ? "lg:opacity-100 lg:translate-x-8 lg:duration-1000"
               : "lg:opacity-0 lg:-translate-x-16"
@@ -43,7 +44,7 @@ const AboutMe = () => {
           learning opportunities it provides.
         </p>
         <p
-          className={`w-9/12 m-auto container font-Nunito leading-relaxed transform ${
+          className={`w-9/12 m-auto container font-openSans leading-relaxed transform ${
             inView
               ? "lg:opacity-100 lg:translate-x-8 lg:duration-1000"
               : "lg:opacity-0 lg:-translate-x-16"
@@ -55,9 +56,6 @@ const AboutMe = () => {
           development. The satisfaction of finally understanding and solving
           problems motivates my pursuit in the career of software engineering.
         </p>
-        {/* <div className="w-24 h-12 border-red-500 border-4 text-center">
-          Resume
-        </div> */}
       </div>
     </div>
   );

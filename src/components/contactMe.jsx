@@ -1,110 +1,61 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import React from "react";
 
 import LinkedIn from "./iconComponents/linkedIn";
 import GitHub from "./iconComponents/github";
-import AngelList from "./iconComponents/angelList";
+import Gmail from "./iconComponents/gmail";
 
 const ContactMe = () => {
-  const [sending, setSending] = useState(false);
-  const year = new Date();
 
-  const sendEmail = e => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_cfkrjqg",
-        "template_s02mffe",
-        e.target,
-        "user_kRZop11cNbFajMXLQfPDC"
-      )
-      .then(
-        result => {
-          console.log(result.text);
-        },
-        error => {
-          console.log(error.text);
-        }
-      );
-    setSending(!sending);
-  };
+  const contacts = [
+    <LinkedIn />,
+    <GitHub />
+  ]
+  const linkName= [
+    "LinkedIn",
+    "GitHub"
+  ]
+  const linkUrl = [
+    "https://linkedin.com/in/raymondli1993",
+    "https://github.com/RaymondLi-1993"
+  ]
+  
   return (
-    <div id="contactMe" className="w-full h-screen bg-gray-800">
-      <div className="w-full h-full container m-auto flex flex-col items-center justify-center ">
-        <div className="text-white text-5xl font-Nunito mt-16">Contact Me</div>
-        {sending ? (
-          <div className="w-full h-9/12 container m-auto text-center text-white text-5xl font-Nunito">
-            Message successfully sent!
+    <div id="contactMe" className="w-full h-2/3 bg-dracula-backGround">
+      <h1 className="text-white text-5xl text-center font-openSans font-semibold py-6">Contact Me</h1>
+      <div className="container w-full h-96 m-auto flex items-center justify-evenly">
+        {contacts.map((elem, index) => {
+          return (
+            <div 
+            key={index}
+                className="relative md:w-52 w-32 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+          <div className="absolute -right-5 -bottom-5 bg-dracula-draculaCyan w-full h-full rounded-xl "></div>
+          <div className="relative bg-dracula-currentLine rounded-xl p-8 space-y-5">
+          <div className="h-2 w-20 bg-dracula-draculaCyan"></div> 
+          {elem}
+          <div>
+          <a
+          className="text-lg text-white font-openSans font-semibold underline cursor-pointer" 
+          href={`${linkUrl[index]}`} target="_blank"
+          >{`${linkName[index]}`}</a>
           </div>
-        ) : (
-          <form
-            className="w-full h-9/12 container m-auto flex flex-col items-center justify-center"
-            onSubmit={sendEmail}
-          >
-            <div className="m-2 w-2/4 h-12">
-              <input
-                placeholder="subject"
-                className="w-full h-full mx-2 rounded-lg border-blue-900 border-4 p-4 focus:border-blue-500 text-lg font-Nunito font-bold"
-                type="text"
-                name="subject"
-                required
-              />
-            </div>
-            <div className="m-2 w-2/4 h-12 flex flex-row">
-              <input
-                placeholder="Email"
-                className="w-1/2 h-full mx-2 rounded-lg border-blue-900 border-4 p-4 focus:border-blue-500 text-lg font-Nunito"
-                type="email"
-                name="Email"
-                required
-              />
-              <span className="w-1/2 h-12">
-                <input
-                  placeholder="Name"
-                  className="w-full h-full mx-2 rounded-lg border-blue-900 border-4 p-4 focus:border-blue-500 text-lg font-Nunito"
-                  type="text"
-                  name="Name"
-                  required
-                />
-              </span>
-            </div>
-            <div className="m-2 w-2/4 h-44">
-              <textarea
-                placeholder="Message"
-                className="w-full h-full mx-2 rounded-lg border-blue-900 border-4 p-4 focus:border-blue-500 text-lg font-Nunito"
-                name="Message"
-              />
-            </div>
-            <div>
-              <input
-                type="submit"
-                value="Send"
-                className="w-64 p-2 m-2 cursor-pointer rounded-lg hover:bg-gray-500 font-Nunito text-lg"
-              />
-            </div>
-          </form>
-        )}
-        <div className="mb-16 w-1/2 flex flex-row h-12 items-center justify-center">
-          <div className="bg-white rounded-full h-10 w-10 cursor-pointer m-2 transform transition ease-in hover:scale-125">
-            <a href="https://www.linkedin.com/in/raymond-li-460073193">
-              <LinkedIn />
-            </a>
           </div>
-          <div className="bg-white rounded-full h-10 w-10 cursor-pointer m-2 transform transition ease-in hover:scale-125">
-            <a href="https://github.com/RaymondLi-1993">
-              <GitHub />
-            </a>
+        </div>
+          )
+        })}
+          <div className="relative md:w-52 w-32 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+          <div className="absolute -right-5 -bottom-5 bg-dracula-draculaCyan w-full h-full rounded-xl"></div>
+          <div className="relative bg-dracula-currentLine rounded-xl p-8 space-y-5">
+          <div className="h-2 w-20 bg-dracula-draculaCyan"></div> 
+          <Gmail />
+          <div>
+          <a
+          href="mailto:rlii0303@gmail.com"
+          className="text-xl text-white font-openSans font-semibold underline cursor-pointer" 
+          >Gmail</a>
           </div>
-          <div className="bg-white rounded-full h-10 w-10 cursor-pointer m-2 transform transition ease-in hover:scale-125">
-            <a href="#">
-              <AngelList />
-            </a>
           </div>
         </div>
       </div>
-      <h1 className="text-white font-Nunito text-center pt-2  bg-gray-800">
-        Designed and created By Raymond Li © {`${year.getFullYear()}`}.
-      </h1>
     </div>
   );
 };
