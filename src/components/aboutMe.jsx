@@ -34,7 +34,7 @@ const AboutMe = () => {
           About Me
         </h1>
         <p
-          className={`my-4 w-9/12 m-auto container font-openSans transform ${
+          className={`my-4 w-9/12 m-auto container font-openSans text-sm md:text-base transform ${
             inView
               ? "lg:opacity-100 lg:translate-x-8 lg:duration-1000"
               : "lg:opacity-0 lg:-translate-x-16"
@@ -44,7 +44,7 @@ const AboutMe = () => {
           learning opportunities it provides.
         </p>
         <p
-          className={`w-9/12 m-auto container font-openSans transform ${
+          className={`w-9/12 m-auto container font-openSans text-sm md:text-base transform ${
             inView
               ? "lg:opacity-100 lg:translate-x-8 lg:duration-1000"
               : "lg:opacity-0 lg:-translate-x-16"
