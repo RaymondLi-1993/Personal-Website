@@ -35,7 +35,7 @@ const ContactMe = () => {
           <div>
           <a
           className="text-lg text-white font-openSans font-semibold underline cursor-pointer" 
-          href={`${linkUrl[index]}`} target="_blank"
+          href={`${linkUrl[index]}`} target="_blank" rel="noreferrer"
           >{`${linkName[index]}`}</a>
           </div>
           </div>

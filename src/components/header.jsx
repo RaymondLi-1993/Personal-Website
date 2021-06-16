@@ -1,7 +1,7 @@
 import React from "react";
 
 import Email from "./iconComponents/email";
-import { Projects, AboutMe, Skills } from "./iconComponents/technologies";
+import { Projects, Skills } from "./iconComponents/technologies";
 
 const Header = () => {
   const handleClick = data => {
