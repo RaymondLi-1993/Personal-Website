@@ -58,7 +58,7 @@ const skills = () => {
                 key={index}
                 className="lg:w-24 lg:h-24 lg:p-2 w-16 h-16 p-2 content-center"
               >
-                <h1 className="text-dracula-foreGround w-18 text-center text-xs py-1 font-openSans md:text-base md:font-bold">{names[index]}</h1>
+                <h1 className="text-dracula-foreGround font-openSans w-18 text-center text-xs py-1 md:text-sm md:font-bold">{names[index]}</h1>
                 {elem}
               </div>
             );

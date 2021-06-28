@@ -37,7 +37,7 @@ const Hero = () => {
         </h1>
         <div className="container h-16 flex items-end justify-center lg:justify-start lg:mx-11">
           <button className="linkButton w-24 h-8 text-white" style={{ outline: `none` }} onClick={() => {
-            window.open("https://drive.google.com/file/d/1ypuO2dOjNrAKni4PUR6vXu58l7oUN86e/view", "_blank")
+            window.open("https://drive.google.com/file/d/1XYBa7DF3Gaa1G9Cu2gR-PDp51OsMyZEY/view?usp=sharing", "_blank")
             
           }} >Resume</button>
         </div>
