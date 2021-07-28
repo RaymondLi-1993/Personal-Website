@@ -25,12 +25,13 @@ const ContactMe = () => {
       <div className="container w-full h-96 m-auto flex items-center justify-evenly">
         {contacts.map((elem, index) => {
           return (
+            <div className="md:w-52 md:h-52 w-28 h-38">
             <div 
             key={index}
-                className="relative md:w-52 w-32 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-          <div className="absolute -right-5 -bottom-5 bg-dracula-draculaCyan w-full h-full rounded-xl "></div>
+                className="relative w-full h-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+          <div className="absolute md:-right-5 -right-1 -bottom-5 bg-dracula-draculaCyan w-full h-full rounded-xl "></div>
           <div className="relative bg-dracula-currentLine rounded-xl p-8 space-y-5">
-          <div className="h-2 w-20 bg-dracula-draculaCyan"></div> 
+          <div className="h-2 md:w-20 sm:w-12  bg-dracula-draculaCyan"></div> 
           {elem}
           <div>
           <a
@@ -40,12 +41,14 @@ const ContactMe = () => {
           </div>
           </div>
         </div>
+        </div>
           )
         })}
-          <div className="relative md:w-52 w-32 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-          <div className="absolute -right-5 -bottom-5 bg-dracula-draculaCyan w-full h-full rounded-xl"></div>
+          <div className="md:w-52 md:h-52 w-28 h-38">
+          <div className="relative w-full h-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+          <div className="absolute md:-right-5 -bottom-5 -right-1 bg-dracula-draculaCyan w-full h-full rounded-xl"></div>
           <div className="relative bg-dracula-currentLine rounded-xl p-8 space-y-5">
-          <div className="h-2 w-20 bg-dracula-draculaCyan"></div> 
+          <div className="h-2 md:w-20 w-12 bg-dracula-draculaCyan"></div> 
           <Gmail />
           <div>
           <a
@@ -54,6 +57,7 @@ const ContactMe = () => {
           >Gmail</a>
           </div>
           </div>
+        </div>
         </div>
       </div>
     </div>

@@ -45,7 +45,7 @@ const skills = () => {
   return (
     <div
       id="Skills"
-      className="w-full h-80 bg-dracula-currentLine transform -skew-y-2 mt-4"
+      className="w-full h-96 bg-dracula-currentLine transform -skew-y-2 mt-4"
     >
       <div className="container items-center m-auto w-full h-full transform skew-y-2 p-4">
         <div className="text-center font-openSans p-4 text-5xl font-bold text-dracula-foreGround">
@@ -56,9 +56,9 @@ const skills = () => {
             return (
               <div
                 key={index}
-                className="lg:w-24 lg:h-24 lg:p-2 w-16 h-16 p-2 content-center"
+                className="lg:w-24 lg:h-24 lg:p-2 md:w-24 w-16 h-16 p-1 mx-2 content-center"
               >
-                <h1 className="text-dracula-foreGround font-openSans w-18 text-center text-xs py-1 md:text-sm md:font-bold">{names[index]}</h1>
+                <h1 className="text-dracula-foreGround font-openSans w-full text-center text-sm py-1 md:text-base md:font-bold">{names[index]}</h1>
                 {elem}
               </div>
             );

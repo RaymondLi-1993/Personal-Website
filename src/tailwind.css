@@ -11,3 +11,7 @@
 .linkButton{
    @apply transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 rounded border border-black shadow-md  bg-red-600 hover:bg-red-400 cursor-pointer
 }
+
+.contactCards{
+   @apply md:w-16 md:h-16 h-12 w-12 
+}
