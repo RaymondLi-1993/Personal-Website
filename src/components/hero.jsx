@@ -38,7 +38,7 @@ const Hero = () => {
             style={{ outline: `none` }}
             onClick={() => {
               window.open(
-                "https://drive.google.com/file/d/1XYBa7DF3Gaa1G9Cu2gR-PDp51OsMyZEY/view?usp=sharing",
+                "https://drive.google.com/file/d/1Xebn5mbf2_NOpkap6uTf2T5qbyozxUml/view?usp=sharing",
                 "_blank"
               );
             }}
